@@ -11,7 +11,7 @@ const Container = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
-  padding-top: 20px;
+  padding: 20px 0px;
 `;
 
 const Logo = styled.img`
