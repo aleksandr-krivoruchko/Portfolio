@@ -79,7 +79,9 @@ const Works = () => {
         <Left>
           <List>
             {works.map((item) => (
-              <ListItem text={item}>{item}</ListItem>
+              <ListItem text={item} key={item}>
+                {item}
+              </ListItem>
             ))}
           </List>
         </Left>

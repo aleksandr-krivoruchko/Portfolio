@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import AnimatedCube from "./AnimatedCube";
 
 const Section = styled.section`
   height: 100vh;
@@ -83,7 +84,9 @@ const About = () => {
   return (
     <Section>
       <Container>
-        <Left>{/* <Img src="img/moon.png" /> */}</Left>
+        <Left>
+          <AnimatedCube />
+        </Left>
         <Right>
           <Title>Think outside the square space</Title>
           <Subtitle>Who we are</Subtitle>

@@ -4,6 +4,7 @@ import About from "./components/About";
 import Contacts from "./components/Contacts";
 import Hero from "./components/Hero";
 import Works from "./components/Works";
+import Test from "./components/Test";
 
 const Container = styled.div`
   height: 100vh;
@@ -25,6 +26,7 @@ const App = () => {
       <About />
       <Works />
       <Contacts />
+      {/* <Test /> */}
     </Container>
   );
 };

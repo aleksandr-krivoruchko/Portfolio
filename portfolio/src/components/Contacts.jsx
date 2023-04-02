@@ -70,7 +70,7 @@ const Contacts = () => {
       <Container>
         <Left>
           <Form>
-            <Title>Contact me</Title>
+            <Title>Contact us</Title>
             <Input name="name" type="text" required placeholder="Name" />
             <Input name="email" type="email" required placeholder="Email" />
             <Message
