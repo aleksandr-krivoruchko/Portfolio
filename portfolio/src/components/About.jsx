@@ -82,7 +82,7 @@ const Img = styled.img`
 
 const About = () => {
   return (
-    <Section>
+    <Section id="studio">
       <Container>
         <Left>
           <AnimatedCube />

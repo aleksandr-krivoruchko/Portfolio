@@ -66,10 +66,18 @@ const NavBar = () => {
         <Logo src="img/logo.png" />
         <Links>
           <List>
-            <ListItem>Home</ListItem>
-            <ListItem>Studio</ListItem>
-            <ListItem>Works</ListItem>
-            <ListItem>Contacts</ListItem>
+            <ListItem>
+              <a href="#home">Home</a>
+            </ListItem>
+            <ListItem>
+              <a href="#studio">Studio</a>
+            </ListItem>
+            <ListItem>
+              <a href="#works">Works</a>
+            </ListItem>
+            <ListItem>
+              <a href="#contacts">Contacts</a>
+            </ListItem>
           </List>
         </Links>
         <Icons>

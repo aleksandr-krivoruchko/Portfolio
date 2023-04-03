@@ -66,7 +66,7 @@ const Right = styled.div`
 
 const Contacts = () => {
   return (
-    <Section>
+    <Section id="contacts">
       <Container>
         <Left>
           <Form>

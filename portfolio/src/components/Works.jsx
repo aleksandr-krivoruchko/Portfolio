@@ -105,7 +105,7 @@ function setModel(work) {
 const Works = () => {
   const [work, setWork] = React.useState("WebDesign");
   return (
-    <Section>
+    <Section id="works">
       <Container>
         <Left>
           <List>

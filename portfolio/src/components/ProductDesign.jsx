@@ -5,8 +5,16 @@ import Bike from "./Bike";
 
 const ProductDesign = () => {
   return (
-    <Canvas>
-      <OrbitControls enableZoom={false} autoRotate rotateSpeed={16} />
+    <Canvas
+      camera={{
+        fov: 25,
+        near: 0.5,
+        far: 1000,
+        position: [5, 1, 1],
+        rotation: [30, 0, 0],
+      }}
+    >
+      <OrbitControls enableZoom={true} autoRotate autoRotateSpeed={4} />
       <Stage environment="sunset" intensity={0.5}>
         <Bike />
       </Stage>

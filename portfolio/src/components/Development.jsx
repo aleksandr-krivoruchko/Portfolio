@@ -5,8 +5,15 @@ import Tablet from "./Tablet";
 
 const Development = () => {
   return (
-    <Canvas>
-      <OrbitControls enableZoom={false} autoRotate rotateSpeed={16} />
+    <Canvas
+      camera={{
+        fov: 75,
+        near: 0.1,
+        far: 1000,
+        position: [1, 1, 1],
+      }}
+    >
+      <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={3} />
       <Stage environment="sunset" intensity={0.5}>
         <Tablet />
       </Stage>
