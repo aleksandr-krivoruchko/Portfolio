@@ -6,7 +6,7 @@ import Shiba from "./Shiba";
 const Illustration = () => {
   return (
     <Canvas>
-      <OrbitControls enableZoom={false} autoRotate rotateSpeed={16} />
+      <OrbitControls enableZoom={false} autoRotate />
       <Stage environment="sunset" intensity={0.5}>
         <Shiba />
       </Stage>

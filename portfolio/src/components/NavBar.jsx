@@ -33,6 +33,10 @@ const ListItem = styled.li`
     transform: scale(1.1);
   }
 `;
+
+const Link = styled.a`
+  color: #fff;
+`;
 const Icons = styled.div`
   display: flex;
   justify-content: space-around;
@@ -63,20 +67,20 @@ const NavBar = () => {
   return (
     <Section>
       <Container>
-        <Logo src="img/logo.png" />
+        <Logo src="img/my-logo.png" />
         <Links>
           <List>
             <ListItem>
-              <a href="#home">Home</a>
+              <Link href="#home">Home</Link>
             </ListItem>
             <ListItem>
-              <a href="#studio">Studio</a>
+              <Link href="#studio">Studio</Link>
             </ListItem>
             <ListItem>
-              <a href="#works">Works</a>
+              <Link href="#works">Works</Link>
             </ListItem>
             <ListItem>
-              <a href="#contacts">Contacts</a>
+              <Link href="#contacts">Contacts</Link>
             </ListItem>
           </List>
         </Links>

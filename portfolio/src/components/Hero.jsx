@@ -67,6 +67,7 @@ const Button = styled.button`
 `;
 
 const RightSide = styled.div`
+  position: relative;
   height: 100vh;
   scroll-snap-align: center;
   width: 65%;
@@ -76,8 +77,12 @@ const RightSide = styled.div`
 `;
 
 const Img = styled.img`
-  width: 800px;
-  height: 600px;
+  position: absolute;
+  top: 22%;
+  left: 22%;
+  z-index: 5;
+  width: 400px;
+  height: auto;
   object-fit: contain;
   animation: hero 1500ms infinite ease alternate;
 
@@ -87,6 +92,8 @@ const Img = styled.img`
     }
   }
 `;
+
+const CanvasStyled = styled.canvas``;
 
 const Hero = () => {
   return (
@@ -111,20 +118,20 @@ const Hero = () => {
         </LeftSide>
         <RightSide>
           <Img src="img/moon.png" />
-          {/* <Canvas>
+          <Canvas>
             <OrbitControls enableZoom={false} />
             <ambientLight intensity={0.5} />
             <directionalLight position={[20, 20, 5]} />
-            <Sphere args={[1, 100, 200]} scale={1}>
+            <Sphere args={[1, 100, 200]} scale={2.3}>
               <MeshDistortMaterial
                 attach="material"
-                color="#220736"
+                color="#5e1c69"
                 distort={0.5}
                 speed={2}
               />
             </Sphere>
             <MeshDistortMaterial />
-          </Canvas> */}
+          </Canvas>
         </RightSide>
       </Container>
     </Section>
