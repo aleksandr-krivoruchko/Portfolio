@@ -1,5 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import WebDesign from "./WebDesign";
+import Development from "./Development";
+import Illustration from "./Illustration";
+import ProductDesign from "./ProductDesign";
+import SocialMedia from "./SocialMedia";
 
 const works = [
   "Web Design",
@@ -72,20 +77,46 @@ const ListItem = styled.li`
   }
 `;
 
+function setModel(work) {
+  let comp = <WebDesign />;
+  switch (work) {
+    case "Web Design":
+      comp = <WebDesign />;
+      break;
+    case "Development":
+      comp = <Development />;
+      break;
+    case "Illustration":
+      comp = <Illustration />;
+      break;
+    case "Product Design":
+      comp = <ProductDesign />;
+      break;
+    case "Social Media":
+      comp = <SocialMedia />;
+      break;
+
+    default:
+      break;
+  }
+  return comp;
+}
+
 const Works = () => {
+  const [work, setWork] = React.useState("WebDesign");
   return (
     <Section>
       <Container>
         <Left>
           <List>
             {works.map((item) => (
-              <ListItem text={item} key={item}>
+              <ListItem text={item} key={item} onClick={() => setWork(item)}>
                 {item}
               </ListItem>
             ))}
           </List>
         </Left>
-        <Right>right</Right>
+        <Right>{setModel(work)}</Right>
       </Container>
     </Section>
   );

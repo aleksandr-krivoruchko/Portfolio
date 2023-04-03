@@ -3,7 +3,6 @@ import styled from "styled-components";
 import NavBar from "./NavBar";
 import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
-
 const Section = styled.section`
   height: 100vh;
   scroll-snap-align: center;
