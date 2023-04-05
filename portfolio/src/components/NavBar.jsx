@@ -1,9 +1,13 @@
 import React from "react";
 import styled from "styled-components";
+import { Context } from "../context";
 
 const Section = styled.div`
   display: flex;
   justify-content: center;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Container = styled.div`
@@ -12,20 +16,30 @@ const Container = styled.div`
   justify-content: space-around;
   align-items: center;
   padding: 20px 0px;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Logo = styled.img`
   height: 50px;
   cursor: pointer;
 `;
+
 const Links = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
+
 const List = styled.ul`
   display: flex;
   gap: 30px;
 `;
+
 const ListItem = styled.li`
   font-size: 20px;
   cursor: pointer;
@@ -37,11 +51,13 @@ const ListItem = styled.li`
 const Link = styled.a`
   color: #fff;
 `;
+
 const Icons = styled.div`
   display: flex;
   justify-content: space-around;
   align-items: center;
 `;
+
 const Icon = styled.img`
   height: 20px;
   margin-right: 40px;
@@ -50,7 +66,8 @@ const Icon = styled.img`
     transform: scale(1.1);
   }
 `;
-const Button = styled.button`
+
+const Button = styled.a`
   width: 100px;
   padding: 10px;
   background-color: #da4ea2;
@@ -64,10 +81,15 @@ const Button = styled.button`
 `;
 
 const NavBar = () => {
+  const [loop, setLoop] = React.useState(false);
+  const { loopInput, setLoopInput } = React.useContext(Context);
+
   return (
     <Section>
       <Container>
-        <Logo src="img/my-logo.png" />
+        <a href="">
+          <Logo src="img/my-logo.png" />
+        </a>
         <Links>
           <List>
             <ListItem>
@@ -85,8 +107,25 @@ const NavBar = () => {
           </List>
         </Links>
         <Icons>
-          <Icon src="img/search.png" />
-          <Button>Hire now</Button>
+          {loop ? (
+            <input
+              style={{
+                marginRight: "20px",
+                cursor: "pointer",
+                outline: "none",
+              }}
+              type="text"
+              placeholder="your name"
+              autoFocus={true}
+              value={loopInput}
+              onChange={(e) => setLoopInput(e.target.value)}
+            />
+          ) : (
+            <Icon src="img/search.png" onClick={() => setLoop(true)} />
+          )}
+          <Button href="#contacts" onClick={() => setLoop(false)}>
+            Hire now
+          </Button>
         </Icons>
       </Container>
     </Section>

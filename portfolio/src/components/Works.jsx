@@ -20,12 +20,19 @@ const Section = styled.section`
   display: flex;
   justify-content: center;
 `;
+
 const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   width: 1280px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const Right = styled.div`
@@ -42,6 +49,9 @@ const Left = styled.div`
   width: 50%;
   display: flex;
   align-items: center;
+  @media only screen and (max-width: 768px) {
+    justify-content: center;
+  }
 `;
 const List = styled.ul``;
 
@@ -52,6 +62,11 @@ const ListItem = styled.li`
   -webkit-text-stroke: 1px white;
   margin-bottom: 20px;
   position: relative;
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;
+    color: white;
+    -webkit-text-stroke: 0px;
+  }
 
   &::after {
     content: "${(props) => props.text}";

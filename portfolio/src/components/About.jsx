@@ -1,21 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import AnimatedCube from "./AnimatedCube";
-
-const Section = styled.section`
-  height: 100vh;
-  scroll-snap-align: center;
-  display: flex;
-  justify-content: center;
-`;
-
-const Container = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
-  width: 1280px;
-  display: flex;
-  justify-content: space-between;
-`;
+import { Section, Container, Description, Subtitle, Button } from "./Hero";
 
 const Right = styled.div`
   height: 100vh;
@@ -25,42 +11,20 @@ const Right = styled.div`
   justify-content: center;
   gap: 30px;
   width: 50%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    align-items: center;
+    height: 110vh;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 74px;
   word-wrap: break-word;
-`;
-const Subtitle = styled.h3`
-  font-size: 30px;
-  &::before {
-    content: "";
-    display: inline-block;
-    width: 60px;
-    height: 5px;
-    margin-right: 20px;
-    vertical-align: middle;
-    background-color: #fff;
-    border-radius: 20px;
-  }
-`;
-const Description = styled.p`
-  font-size: 18px;
-`;
-
-const Button = styled.button`
-  width: 200px;
-  height: 50px;
-  padding: 10px;
-  background-color: #da4ea2;
-  color: white;
-  font-size: 20px;
-  border: none;
-  border-radius: 10px;
-  margin: 0 auto;
-  cursor: pointer;
-  &:hover {
-    background-color: #da0ea2;
+  @media only screen and (max-width: 768px) {
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 30px;
   }
 `;
 
@@ -71,13 +35,9 @@ const Left = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-`;
-
-const Img = styled.img`
-  width: 800px;
-  height: 600px;
-  object-fit: contain;
-  animation: hero 1500ms infinite ease alternate;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const About = () => {

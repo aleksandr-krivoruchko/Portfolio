@@ -3,7 +3,8 @@ import styled from "styled-components";
 import NavBar from "./NavBar";
 import { Canvas } from "@react-three/fiber";
 import { MeshDistortMaterial, OrbitControls, Sphere } from "@react-three/drei";
-const Section = styled.section`
+
+export const Section = styled.section`
   height: 100vh;
   scroll-snap-align: center;
   display: flex;
@@ -11,30 +12,46 @@ const Section = styled.section`
   align-items: center;
 `;
 
-const Container = styled.div`
+export const Container = styled.div`
   height: 100vh;
   scroll-snap-align: center;
   width: 1280px;
   display: flex;
   justify-content: space-between;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    flex-direction: column-reverse;
+    justify-content: center;
+    align-items: center;
+  }
 `;
 
 const LeftSide = styled.div`
-  height: 100vh;
-  scroll-snap-align: center;
   display: flex;
   flex-direction: column;
   justify-content: center;
   gap: 30px;
   width: 35%;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    align-items: center;
+    height: 120vh;
+  }
 `;
 
 const Title = styled.h1`
   font-size: 74px;
   word-wrap: break-word;
+  white-space: pre-wrap;
+  @media only screen and (max-width: 768px) {
+    font-size: 40px;
+    text-align: center;
+  }
 `;
-const Subtitle = styled.h3`
+
+export const Subtitle = styled.h3`
   font-size: 30px;
+  color: #da0ea2;
   &::before {
     content: "";
     display: inline-block;
@@ -42,15 +59,25 @@ const Subtitle = styled.h3`
     height: 5px;
     margin-right: 20px;
     vertical-align: middle;
-    background-color: #fff;
+    background-color: #da0ea2;
     border-radius: 20px;
   }
+  @media only screen and (max-width: 768px) {
+    font-size: 22px;
+    text-align: center;
+    /* margin-bottom: 30px; */
+  }
 `;
-const Description = styled.p`
+export const Description = styled.p`
   font-size: 18px;
+  @media only screen and (max-width: 768px) {
+    font-size: 20px;
+    text-align: center;
+    padding: 10px;
+  }
 `;
 
-const Button = styled.button`
+export const Button = styled.button`
   width: 200px;
   height: 50px;
   padding: 10px;
@@ -68,12 +95,16 @@ const Button = styled.button`
 
 const RightSide = styled.div`
   position: relative;
-  height: 100vh;
   scroll-snap-align: center;
   width: 65%;
   display: flex;
   flex-direction: column;
   justify-content: center;
+  @media only screen and (max-width: 768px) {
+    width: 100%;
+    align-items: center;
+    height: 80vh;
+  }
 `;
 
 const Img = styled.img`
@@ -91,9 +122,12 @@ const Img = styled.img`
       transform: translateY(30px);
     }
   }
+  @media only screen and (max-width: 768px) {
+    width: 250px;
+    top: 15%;
+    left: 22%;
+  }
 `;
-
-const CanvasStyled = styled.canvas``;
 
 const Hero = () => {
   return (
@@ -106,13 +140,7 @@ const Hero = () => {
           <Description>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed
             elementum magna, eget vehicula neque. Morbi a turpis nec nulla
-            gravida congue. Cras lobortis, enim id dapibus elementum, nunc augue
-            condimentum nunc, at aliquet neque erat quis neque. Phasellus nisi
-            lectus, porta a mattis gravida, imperdiet ut felis. Proin malesuada
-            mi nec facilisis aliquet. Nulla interdum tortor non nibh molestie
-            feugiat. Curabitur vel magna quis nulla laoreet volutpat. Maecenas
-            quis vulputate neque, sed venenatis turpis. Sed scelerisque placerat
-            massa, non pharetra velit mollis nec.
+            gravida congue.
           </Description>
           <Button>Read More</Button>
         </LeftSide>

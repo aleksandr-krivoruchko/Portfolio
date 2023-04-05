@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Map from "./Map";
+import { Context } from "../context";
 
 const Section = styled.section`
   height: 100vh;
@@ -19,6 +20,10 @@ const Left = styled.div`
   align-items: flex-end;
   flex-direction: column;
   flex: 1;
+  @media only screen and (max-width: 768px) {
+    padding: 0 20px;
+    align-items: center;
+  }
 `;
 const Title = styled.h3`
   font-size: 30px;
@@ -29,6 +34,9 @@ const Form = styled.form`
   display: flex;
   flex-direction: column;
   gap: 10px;
+  @media only screen and (max-width: 768px) {
+    width: 80%;
+  }
 `;
 const Input = styled.input`
   font-size: 16px;
@@ -62,16 +70,26 @@ const SubmitBtn = styled.button`
 
 const Right = styled.div`
   flex: 1;
+  @media only screen and (max-width: 768px) {
+    display: none;
+  }
 `;
 
 const Contacts = () => {
+  const { loopInput } = React.useContext(Context);
   return (
     <Section id="contacts">
       <Container>
         <Left>
           <Form>
             <Title>Contact us</Title>
-            <Input name="name" type="text" required placeholder="Name" />
+            <Input
+              name="name"
+              type="text"
+              required
+              placeholder="Name"
+              value={loopInput}
+            />
             <Input name="email" type="email" required placeholder="Email" />
             <Message
               name="message"

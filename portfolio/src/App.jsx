@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { Context } from "./context";
 import About from "./components/About";
 import Contacts from "./components/Contacts";
 import Hero from "./components/Hero";
 import Works from "./components/Works";
-import Test from "./components/Test";
 
 const Container = styled.div`
   height: 100vh;
@@ -20,14 +20,16 @@ const Container = styled.div`
 `;
 
 const App = () => {
+  const [loopInput, setLoopInput] = React.useState(null);
   return (
-    <Container>
-      <Hero />
-      <About />
-      <Works />
-      <Contacts />
-      {/* <Test /> */}
-    </Container>
+    <Context.Provider value={{ loopInput, setLoopInput }}>
+      <Container>
+        <Hero />
+        <About />
+        <Works />
+        <Contacts />
+      </Container>
+    </Context.Provider>
   );
 };
 
