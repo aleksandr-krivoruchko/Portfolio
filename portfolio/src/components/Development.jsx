@@ -7,16 +7,16 @@ const Development = () => {
   return (
     <Canvas
       camera={{
-        fov: 75,
-        near: 0.1,
-        far: 1000,
+        fov: 95,
+        near: 0.5,
+        far: 500,
         position: [1, 1, 1],
       }}
     >
       <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={3} />
-      <Stage environment="sunset" intensity={0.5}>
-        <Tablet />
-      </Stage>
+      <Tablet />
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[1, 1, 5]} />
     </Canvas>
   );
 };

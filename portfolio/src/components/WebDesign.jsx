@@ -6,10 +6,10 @@ import Ball from "./Ball";
 const WebDesign = () => {
   return (
     <Canvas>
-      <OrbitControls enableZoom={false} autoRotate />
-      <Stage environment="sunset" intensity={0.5}>
-        <Ball />
-      </Stage>
+      <Ball />
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[1, 1, 5]} />
+      <OrbitControls autoRotate enableZoom={true} autoRotateSpeed={5} />
     </Canvas>
   );
 };

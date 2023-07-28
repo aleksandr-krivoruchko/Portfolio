@@ -7,16 +7,16 @@ const SocialMedia = () => {
   return (
     <Canvas
       camera={{
-        fov: 75,
+        fov: 150,
         near: 0.1,
         far: 5000,
-        position: [1, 0.3, 0],
+        position: [1, 0.3, 1],
       }}
     >
-      <OrbitControls enableZoom={false} autoRotate autoRotateSpeed={-3} />
-      <Stage environment="sunset" intensity={0.5}>
-        <Food />
-      </Stage>
+      <OrbitControls enableZoom={true} autoRotate autoRotateSpeed={-3} />
+      <Food />
+      <ambientLight intensity={0.5} />
+      <directionalLight position={[1, 1, 1]} />
     </Canvas>
   );
 };

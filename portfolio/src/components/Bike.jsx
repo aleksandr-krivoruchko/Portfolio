@@ -13,13 +13,17 @@ export default function Model(props) {
           position={[-20.86, -6.79, 20.86]}
           rotation={[-Math.PI / 2, 0, Math.PI / 2]}
         >
-          <group name="TheRocketAnimationfbx" rotation={[Math.PI / 2, 0, 0]}>
+          <group
+            name="TheRocketAnimationfbx"
+            rotation={[Math.PI / 2, 0, 0]}
+            scale={[0.08, 0.08, 0.08]}
+          >
             <group name="Object_2">
               <group name="RootNode">
                 <group
                   name="Armature"
                   rotation={[-Math.PI / 2, 0, 0]}
-                  scale={100}
+                  scale={30}
                 >
                   <group name="Object_7">
                     <group name="_rootJoint">

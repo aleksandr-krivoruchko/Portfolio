@@ -12,7 +12,7 @@ export default function Model(props) {
             material={materials.aiStandardSurface1}
             position={[0, 0, -0.06]}
             rotation={[-Math.PI / 2, 0, 0]}
-            scale={[0.98, 0.97, 0.98]}
+            scale={[0.3, 0.3, 0.3]}
           />
         </group>
       </group>

@@ -7,9 +7,7 @@ const Illustration = () => {
   return (
     <Canvas>
       <OrbitControls enableZoom={false} autoRotate />
-      <Stage environment="sunset" intensity={0.5}>
-        <Shiba />
-      </Stage>
+      <Shiba />
     </Canvas>
   );
 };

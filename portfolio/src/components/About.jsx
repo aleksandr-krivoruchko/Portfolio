@@ -54,7 +54,7 @@ const About = () => {
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus sed
             elementum magna, eget vehicula neque.
           </Description>
-          <Button>See our works</Button>
+          <Button href="#works">See our works</Button>
         </Right>
       </Container>
     </Section>

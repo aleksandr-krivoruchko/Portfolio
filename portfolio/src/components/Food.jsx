@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 export default function Model(props) {
   const { nodes, materials } = useGLTF("/food-transformed.glb");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={[-0.8, 0.8, 0.8]}>
       <mesh
         geometry={nodes.Object_4.geometry}
         material={materials.banka}

@@ -4,7 +4,7 @@ import { useGLTF } from "@react-three/drei";
 export default function Model(props) {
   const { nodes, materials } = useGLTF("/shiba-transformed.glb");
   return (
-    <group {...props} dispose={null}>
+    <group {...props} dispose={null} scale={[1.5, 1.5, 1.5]}>
       <mesh
         geometry={nodes.Group18985_default_0.geometry}
         material={materials["default"]}

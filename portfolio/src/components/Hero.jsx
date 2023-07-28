@@ -77,9 +77,8 @@ export const Description = styled.p`
   }
 `;
 
-export const Button = styled.button`
+export const Button = styled.a`
   width: 200px;
-  height: 50px;
   padding: 10px;
   background-color: #da4ea2;
   color: white;
@@ -87,6 +86,8 @@ export const Button = styled.button`
   border: none;
   border-radius: 10px;
   margin: 0 auto;
+  text-align: center;
+  vertical-align: middle;
   cursor: pointer;
   &:hover {
     background-color: #da0ea2;
@@ -142,7 +143,7 @@ const Hero = () => {
             elementum magna, eget vehicula neque. Morbi a turpis nec nulla
             gravida congue.
           </Description>
-          <Button>Read More</Button>
+          <Button href="#studio">Read More</Button>
         </LeftSide>
         <RightSide>
           <Img src="img/moon.png" />
